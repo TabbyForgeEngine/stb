@@ -1,0 +1,6 @@
+[submodule "stb_image_resize"]
+	path = stb_image_resize
+	url = https://github.com/TabbyForgeEngine/stb_image_resize
+[submodule "stb_sprintf"]
+	path = stb_sprintf
+	url = https://github.com/TabbyForgeEngine/stb_sprintf

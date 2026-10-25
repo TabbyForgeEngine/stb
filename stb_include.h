@@ -37,6 +37,10 @@
 #ifndef STB_INCLUDE_STB_INCLUDE_H
 #define STB_INCLUDE_STB_INCLUDE_H
 
+#ifndef STB_INCLUDE_LOAD_FILE
+#define STB_INCLUDE_LOAD_FILE(Filename, Plen) stb_include_load_file(Filename, Plen)
+#endif
+
 // Do include-processing on the string 'str'. To free the return value, pass it to free()
 char *stb_include_string(char *str, char *inject, char *path_to_includes, char *filename_for_line_directive, char error[256]);
 
@@ -273,7 +277,7 @@ char *stb_include_file(char *filename, char *inject, char *path_to_includes, cha
 {
    size_t len;
    char *result;
-   char *text = stb_include_load_file(filename, &len);
+   char *text = STB_INCLUDE_LOAD_FILE(filename, &len);
    if (text == NULL) {
       strcpy(error, "Error: couldn't load '");
       strcat(error, filename);
