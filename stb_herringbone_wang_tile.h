@@ -165,6 +165,7 @@ int main(int argc, char **argv)
 #endif
 
 typedef struct stbhw_tileset stbhw_tileset;
+struct stbhw__process;
 
 // returns description of last error produced by any function (not thread-safe)
 STBHW_EXTERN const char *stbhw_get_last_error(void);
